@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basicForm.css">
+    <title>Basic Form</title>
+</head>
+<body>
+<div id="left">
+    <div id="odin-image">
+        <img src="odin-lined.png">
+        <p>ODIN</p>
+    </div>
+    <footer>Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
+    </footer>
+</div>
+<div id="right">
+    <h1>Odin Project form practice project. This form does not work.</h1>
+
+ <div id="formDiv">
+    <h1>Let's do this!</h1>
+    <form action="/my-handling-form-page" method="post">
+    <p>
+    <label for="first">First name:</label>
+    <input type="text" id="first" name="first_name"/>    
+    <label for="last">Last name:</label>
+    <input type="text" id="last" name="last_name"/>
+    </p>
+    <p>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="user_email"/>
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="user_phone"/>
+    </p>
+    <p>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="user_password"/>
+    <label for="confirm">Confirm Password</label>
+    <input type="password" id="confirm"/>
+    </p>
+ </div>
+    <button type="submit">Create Account</button>
+    </form>
+    <p>Already have an account? Log in</p>
+</div>
+</body>
+</html>

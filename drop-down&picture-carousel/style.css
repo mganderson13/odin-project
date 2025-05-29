@@ -1,0 +1,21 @@
+#dropDownButton {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropDownListContent {
+    display: none;
+    border: 2px solid black;
+    width: 100px;
+    height: auto; /* Allow it to expand with content */
+    background-color: white; /* To make sure it's visible */
+    position: absolute; /* Optional, depending on layout */
+    z-index: 10; /* Make sure it's not hidden behind something */
+  }
+  
+  .show {
+    display: block;
+  }
