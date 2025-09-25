@@ -1,0 +1,23 @@
+.gameboard {
+    border: 5px solid black;
+    display: grid; /* Make the container a grid */
+    grid-template-columns: repeat(10, 1fr); /* 10 columns, each taking equal fractional space */
+    grid-template-rows: repeat(10, 1fr); /* 10 rows, each taking equal fractional space */
+    width: 500px; /* Example width for the container */
+    height: 500px; /* Example height for the container */
+}
+
+.square {
+    border: 1px solid lightgray;
+    display: flex; /* For centering content within each cell, if needed */
+    justify-content: center;
+    align-items: center;
+}
+
+.playerShip{
+    background-color: blue;
+}
+
+.computerShip{
+    background-color: red;
+}

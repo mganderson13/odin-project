@@ -116,7 +116,70 @@ class Tree {
         }
         return null;
     }
+
+    levelOrder(callback) {
+        if (this.root === null) {
+            return;
+        }
+        const queue = [];
+        queue.push(this.root)
+
+        while(queue.length !== 0) {
+            let current = queue[0];
+            callback(current);
+            if(current.left) {
+                queue.push(current.left);
+            }
+            if(current.right) {
+                queue.push(current.right)
+            }
+            queue.shift();
+        }
+    }
+        preOrder(callback) {
+            function preOrderRec(node){
+            if(node === null) {
+                return;
+            }
+            callback(node);
+            preOrderRec(node.left);
+            preOrderRec(node.right);
+        }
+        preOrderRec(this.root);
+        }
+
+    getHeight(node) {
+    if (node === null) {
+        return 0;
+    }
+    const leftHeight = getHeight(node.left);
+    const rightHeight = getHeight(node.right);
+    return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    isBalanced(root) {
+        if (root === null) {
+            return true;
+        }
+        const leftHeight = this.getHeight(root.left);
+        const rightHeight = this.getHeight(root.right);
+        const heightDiff = Math.abs(leftHeight - rightHeight);
+        if (heightDiff > 1) {
+            return false;
+        }
+    return isBalanced(root.left) && isBalanced(root.right);
+    }
+
 //end tree func
+}
+
+function driver() {
+    function createArray() {
+        const array = []
+        while(array.length < 20) {
+            array.push(Math.floor(Math.random))
+        }
+    }
 }
 
 const prettyPrint = (node, prefix = '', isLeft = true) => {
@@ -136,3 +199,10 @@ const prettyPrint = (node, prefix = '', isLeft = true) => {
   tree.insert(24);
   console.log(tree.find(10));
   prettyPrint(tree.root);
+  tree.levelOrder((node) => {
+    console.log(node.data);
+    });
+console.log("break")
+    tree.preOrder((node) => {
+    console.log(node.data);
+    });
