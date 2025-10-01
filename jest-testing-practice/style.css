@@ -21,3 +21,11 @@
 .computerShip{
     background-color: red;
 }
+
+.hitShip {
+    background-color: green;
+}
+
+.missed {
+    background-color: grey;
+}
