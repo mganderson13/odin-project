@@ -18,8 +18,8 @@ function initializeGame() {
     const playerboardDiv = document.getElementById("playerboard");
     const computerboardDiv = document.getElementById("computerboard");
 
-player1.playerboard.gameboard.forEach((row, x) => {
-  row.forEach((cell, y) => {
+player1.playerboard.gameboard.forEach((row, x) => { //x in (row, x) is the index
+  row.forEach((cell, y) => { //y in (cell, y) is the index
     const square = document.createElement("div");
     square.classList.add("square");
     square.classList.add("playerSquare");
